@@ -1,17 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = ">=4.60.0"
-    }
-  }
-}
-
-provider "aws" {
-  profile = var.profile
-  region  = var.region
-}
-
 resource "aws_security_group" "sample_sg" {
   name        = "dev-sg-terraformtest-aps1"
   vpc_id      = var.vpc_id
